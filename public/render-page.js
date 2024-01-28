@@ -4244,8 +4244,8 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "Brittany Chiang",
-    "short_name": "Brittany Chiang",
+    "name": "Sovannmeasna Ly",
+    "short_name": "Sovannmeasna Ly",
     "start_url": "/",
     "background_color": "#020c1b",
     "theme_color": "#0a192f",
@@ -4256,7 +4256,7 @@ var plugins = [{
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": "dedd91ab2778735e31d0a7ccbb422fb7"
+    "cacheDigest": "8f0145004e8a1a8814b6e81557ab0a37"
   }
 }, {
   name: 'gatsby-plugin-offline',
