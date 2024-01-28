@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['JavaScript (ES6+)', 'TypeScript', 'React', 'Eleventy', 'Node.js', 'WordPress'];
+  const skills = ['Swift/SwiftUI', 'Kotlin', 'JavaScript (ES6+)', 'TypeScript', 'Dart/Flutter', 'Java', 'Objective-C', 'PHP/Laravel'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -135,30 +135,29 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              Hello! My name is Brittany and I enjoy creating things that live on the internet. My
-              interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot
-              about HTML &amp; CSS!
+            Hello! My name is Measna and I’m a fast learner, I’m love to try first before saying it impossible. I love to do things from my best to make sure I don’t have any regrets. 
+            I have been adding value to myself from mobile technologies to web technologies, from a developer to a technical lead, and from a technical guy to a business guy.
             </p>
 
             <p>
               Fast-forward to today, and I’ve had the privilege of working at{' '}
-              <a href="https://us.mullenlowe.com/">an advertising agency</a>,{' '}
-              <a href="https://starry.com/">a start-up</a>,{' '}
-              <a href="https://www.apple.com/">a huge corporation</a>, and{' '}
-              <a href="https://scout.camd.northeastern.edu/">a student-led design studio</a>. My
-              main focus these days is building accessible, inclusive products and digital
-              experiences at <a href="https://upstatement.com/">Upstatement</a> for a variety of
-              clients.
+              <a href="https://hari.wtf/">a loyalty expertise</a>,{' '}
+              <a href="https://lodosha.jp/">a job matching platform</a>,{' '}
+              <a href="https://lndigital.com.kh/">a fintech platform</a>, and{' '}
+              <a href="https://spacianet.com.kh/">an accommodation platform</a> for start-up companies. And 
+              I enjoy dedicating my free time to bringing my ideas to life through personal projects, exploring new concepts, and enhancing my knowledge. 
+              Some projects are distributed to stores like LoanCalculation app on <a href="https://upstatement.com/">Google Play Store</a> and <a href="https://upstatement.com/">Apple App Store</a>.
             </p>
 
             <p>
-              I also recently{' '}
-              <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
-                launched a course
+              I have relocated to {' '}
+              <a href="https://www.usa.gov/">
+              United States
               </a>{' '}
-              that covers everything you need to build a web app with the Spotify API using Node
-              &amp; React.
+              to pursuing my master's degree in Computer Science at {' '}
+              <a href="https://www.miu.edu/">
+                Maharishi International University
+              </a>{' '}. And In parallel, seeking new challenges and delving into new cultures, ideas, and technologies.
             </p>
 
             <p>Here are a few technologies I’ve been working with recently:</p>
