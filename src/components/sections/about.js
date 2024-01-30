@@ -146,7 +146,7 @@ const About = () => {
               <a href="https://lndigital.com.kh/">a fintech platform</a>, and{' '}
               <a href="https://spacianet.com.kh/">an accommodation platform</a> for start-up companies. And 
               I enjoy dedicating my free time to bringing my ideas to life through personal projects, exploring new concepts, and enhancing my knowledge. 
-              Some projects are distributed to stores like LoanCalculation app on <a href="https://upstatement.com/">Google Play Store</a> and <a href="https://upstatement.com/">Apple App Store</a>.
+              Some projects are distributed to stores like LoanCalculation app on <a href="https://play.google.com/store/apps/details?id=biz.appkhmer.loanCalculator">Google Play Store</a> and <a href="https://apps.apple.com/us/app/loan-calculator-cambodia/id1251857821">Apple App Store</a>.
             </p>
 
             <p>
