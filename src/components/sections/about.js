@@ -136,7 +136,7 @@ const About = () => {
           <div>
             <p>
             Hello! My name is Measna and I’m a fast learner, I’m love to try first before saying it impossible. I love to do things from my best to make sure I don’t have any regrets. 
-            I have been adding value to myself from mobile technologies to web technologies, from a developer to a technical lead, and from a technical guy to a business guy.
+            I have been adding value to myself from mobile technologies to web technologies, from a developer to a technical lead, and from a technical perspective to a business perspective.
             </p>
 
             <p>
