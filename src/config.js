@@ -7,6 +7,10 @@ module.exports = {
       url: 'https://github.com/MeasnaLazi',
     },
     {
+      name: 'Linkedin',
+      url: 'https://www.linkedin.com/in/sovannmeana-ly',
+    },
+    {
       name: 'Instagram',
       url: 'https://www.instagram.com/_lazi__',
     },
@@ -14,10 +18,6 @@ module.exports = {
     //   name: 'Twitter',
     //   url: 'https://twitter.com/measna.ly',
     // },
-    {
-      name: 'Linkedin',
-      url: 'https://www.linkedin.com/in/sovannmeana-ly',
-    },
     // {
     //   name: 'Codepen',
     //   url: 'https://codepen.io/bchiang7',

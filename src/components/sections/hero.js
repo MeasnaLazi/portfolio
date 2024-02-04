@@ -71,11 +71,14 @@ const Hero = () => {
     </>
   );
   const five = (
-    <a
-      className="email-link"
-      href="https://github.com/MeasnaLazi"
-      target="_blank"
-      rel="noreferrer">
+    // <a
+    //   className="email-link"
+    //   href="https://github.com/MeasnaLazi"
+    //   target="_blank"
+    //   rel="noreferrer">
+    //   Keep In Touch
+    // </a>
+    <a className="email-link" href={`mailto:lymeasna1@gmail.com`}>
       Keep In Touch
     </a>
   );
