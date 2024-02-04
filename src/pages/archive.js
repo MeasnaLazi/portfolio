@@ -174,8 +174,8 @@ const ArchivePage = ({ location, data }) => {
                     date,
                     github,
                     external,
-                    ios,
-                    android,
+                    appstore,
+                    playstore,
                     title,
                     tech,
                     company,
@@ -213,13 +213,13 @@ const ArchivePage = ({ location, data }) => {
                               <Icon name="GitHub" />
                             </a>
                           )}
-                          {ios && (
-                            <a href={ios} aria-label="Apple App Store Link">
+                          {appstore && (
+                            <a href={appstore} aria-label="Apple App Store Link">
                               <Icon name="AppStore" />
                             </a>
                           )}
-                          {android && (
-                            <a href={android} aria-label="Google Play Store Link">
+                          {playstore && (
+                            <a href={playstore} aria-label="Google Play Store Link">
                               <Icon name="PlayStore" />
                             </a>
                           )}
@@ -256,8 +256,8 @@ export const pageQuery = graphql`
             tech
             github
             external
-            ios
-            android
+            appstore
+            playstore
             company
           }
           html

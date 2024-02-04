@@ -3,8 +3,8 @@ date: '4'
 title: 'HARi Wallet App'
 cover: './demo.png'
 playstore: 'https://play.google.com/store/apps/details?id=com.haricrm.passbookandroid'
-external: 'https://www.newline.co/courses/build-a-spotify-connected-app'
-cta: ''
+external: 
+cta: 
 tech:
   - Kotlin
   - Android Studio
