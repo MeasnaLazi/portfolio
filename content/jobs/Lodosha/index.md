@@ -1,6 +1,6 @@
 ---
 date: '2020-04-01'
-title: 'Co-Founder | Technical Lead'
+title: 'Co-Founder | Technical Lead | Developer'
 company: 'Lodosha'
 location: 'Phnom Penh, Cambodia'
 range: 'Augest 2019 & February 2022'
