@@ -79,7 +79,7 @@ const Hero = () => {
     //   Keep In Touch
     // </a>
     <a className="email-link" href={`mailto:lymeasna1@gmail.com`}>
-      Keep In Touch
+      Get In Touch
     </a>
   );
 
