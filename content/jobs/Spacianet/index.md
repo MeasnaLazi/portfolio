@@ -8,7 +8,7 @@ url: 'https://spacianet.com.kh/'
 ---
 
 - Led IT development team with 12 members and all projects in the company with various technologies. 
-- A middle communication between the business team and IT development team to make sure everyone on the same page.
+- A middle communication between the business team and IT development team to make sure everyone is on the same page.
 - Analyzing specifications, giving estimates, and coordinating with engineers to ensure the project is completed on schedule.
 - Primarily coding on high-priority projects including those facing potential deadline issues.  I keep back and forth on almost every project.
 - Serving as a mentor, code reviewer, solution provider, and decision-maker for IT members, offering guidance and support across various aspects of their work.
