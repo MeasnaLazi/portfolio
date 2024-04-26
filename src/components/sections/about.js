@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Swift/SwiftUI', 'Kotlin', 'JavaScript (ES6+)', 'TypeScript', 'Dart/Flutter', 'Java', 'Objective-C', 'PHP/Laravel'];
+  const skills = ['Swift/SwiftUI', 'Kotlin', 'JavaScript (ES6+)', 'TypeScript', 'Dart/Flutter', 'Java(SE, Spring, Apex)', 'Objective-C', 'PHP/Laravel', 'NodeJS (Express/Nest)', 'AWS and Docker'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>
@@ -160,7 +160,7 @@ const About = () => {
               </a>{' '}. And In parallel, seeking new challenges and delving into new cultures, ideas, and technologies.
             </p>
 
-            <p>Here are a few technologies I’ve been working with recently:</p>
+            <p>Here are a few technologies I’ve been working with:</p>
           </div>
 
           <ul className="skills-list">
