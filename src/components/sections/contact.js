@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import { srConfig, email } from '@config';
+import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
+import ContactForm from './contact-form';
 
 const StyledContactSection = styled.section`
   max-width: 600px;
@@ -64,9 +65,12 @@ const Contact = () => {
         Whether you have a question or any opportunities or just want to say hi, I’ll do my best to get back to you!
       </p>
 
-      <a className="email-link" href={`mailto:${email}`}>
+      {/* <a className="email-link" href={`mailto:${email}`}>
         Say Hello
-      </a>
+      </a> */}
+
+      <ContactForm />
+      
     </StyledContactSection>
   );
 };
