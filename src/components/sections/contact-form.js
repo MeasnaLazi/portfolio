@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
-import ReCAPTCHA from 'react-google-recaptcha'
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const StyledFormSection = styled.div`
   max-width: 600px;
@@ -77,8 +77,8 @@ const ContactForm = () => {
     email: '',
     phone: '',
     title: '',
-    message: ''
-  }
+    message: '',
+  };
   const [inputs, setInputs] = useState(initialInputs);
 
   const initialErrors = {
@@ -86,8 +86,8 @@ const ContactForm = () => {
     email: false,
     phone: false,
     title: false,
-    message: false
-  }
+    message: false,
+  };
   const [errors, setErrors] = useState(initialErrors);
   const [recaptchaValue, setRecaptchaValue] = useState(null);
 
@@ -99,35 +99,24 @@ const ContactForm = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs(values => ({...values, [name]: value}))
-    validate(name, value);
-  }
+  const isEmailValid = email => email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
 
-  const handleRecaptchaChange = (value) => {
-    setRecaptchaValue(value);
-  };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-
-    if (recaptchaValue == null) {
+  const validate = (name, value) => {
+    if (!value) {
+      setErrors(errors => ({ ...errors, [name]: true }));
       return;
     }
-
-    setErrors({ ...initialErrors });
-    setTimeout(() => {
-        if (!isValidateAll()) {
-          return;
-        }
-        submitData();
-      }, 0);
-  }
+    if (name === 'email') {
+      if (!isEmailValid(value)) {
+        setErrors(errors => ({ ...errors, [name]: true }));
+        return;
+      }
+    }
+    setErrors(errors => ({ ...errors, [name]: false }));
+  };
 
   const isValidateAll = () => {
-    let errors = {};
+    const errors = {};
     let isValid = true;
 
     if (!inputs.name) {
@@ -153,40 +142,49 @@ const ContactForm = () => {
     setErrors(errors);
 
     return isValid;
-  }
+  };
 
   const submitData = () => {
     alert(inputs);
-  }
+  };
 
-  const validate = (name, value) => {
-    if (!value) {
-        setErrors(errors => ({...errors, [name]: true}));
+  const handleChange = event => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({ ...values, [name]: value }));
+    validate(name, value);
+  };
+
+  const handleRecaptchaChange = value => {
+    setRecaptchaValue(value);
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    if (recaptchaValue === null) {
+      return;
+    }
+
+    setErrors({ ...initialErrors });
+    setTimeout(() => {
+      if (!isValidateAll()) {
         return;
-    }
-    if (name == "email") {
-        if (!isEmailValid(value)) {
-            setErrors(errors => ({...errors, [name]: true}));
-            return;
-        }
-    }
-    setErrors(errors => ({...errors, [name]: false}));
-  }
-
-  const isEmailValid = (email) => {
-    return email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i);
-  }
+      }
+      submitData();
+    }, 0);
+  };
 
   return (
     <StyledFormSection id="contact-form" ref={revealContainer}>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="name">Name<span className="required">*</span></label>
-          <input className={errors.name ? "input input-error" : "input"} id="name" type="text" value={inputs.name}  name="name" placeholder="Enter your name"  onChange={handleChange}></input>
+          <input className={errors.name ? 'input input-error' : 'input'} id="name" type="text" value={inputs.name}  name="name" placeholder="Enter your name"  onChange={handleChange}></input>
         </div>
         <div>
           <label htmlFor="email">Email<span className="required">*</span></label>
-          <input className={errors.email ? "input input-error" : "input"} id="email" type="text" value={inputs.email} name="email" placeholder="Enter your email"  onChange={handleChange}></input>
+          <input className={errors.email ? 'input input-error' : 'input'} id="email" type="text" value={inputs.email} name="email" placeholder="Enter your email"  onChange={handleChange}></input>
         </div>
         <div>
           <label htmlFor="phone">Phone</label>
@@ -194,15 +192,15 @@ const ContactForm = () => {
         </div>
         <div>
           <label htmlFor="title">Title<span className="required">*</span></label>
-          <input className={errors.title ? "input input-error" : "input"} id="title" type="text" value={inputs.title} name="title" placeholder="Enter your message title"  onChange={handleChange}></input>
+          <input className={errors.title ? 'input input-error' : 'input'} id="title" type="text" value={inputs.title} name="title" placeholder="Enter your message title"  onChange={handleChange}></input>
         </div>
         <div>
           <label htmlFor="message">Message<span className="required">*</span></label>
-          <textarea className={errors.message ? "input input-error" : "input"} id="message" rows={5} value={inputs.message} name="message" placeholder="Enter your message"  onChange={handleChange}></textarea>
+          <textarea className={errors.message ? 'input input-error' : 'input'} id="message" rows={5} value={inputs.message} name="message" placeholder="Enter your message"  onChange={handleChange}></textarea>
         </div>
         <div >
           <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} onChange={handleRecaptchaChange} />
-          <input className="submit-button" disabled={recaptchaValue == null} type="submit" value="Submit" />
+          <input className="submit-button" disabled={recaptchaValue === null} type="submit" value="Submit" />
         </div>
       </form>
     </StyledFormSection>
