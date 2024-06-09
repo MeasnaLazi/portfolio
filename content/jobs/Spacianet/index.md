@@ -3,7 +3,7 @@ date: '2021-12-21'
 title: 'IT Manager | Technical Lead | Developer'
 company: 'SpaciaNet'
 location: 'Phnom Penh, Cambodia'
-range: 'February 2022 - April 2023 (Full-Time) | April 2023 - April 2024 (Distance Support)'
+range: 'February 2022 - April 2023 | April 2023 - April 2024 (Distance Support)'
 url: 'https://spacianet.com.kh/'
 ---
 
