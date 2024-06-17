@@ -166,7 +166,7 @@ const ContactForm = () => {
 
   const submitData = async () => {
     setInputs(values => ({ ...values, ['recaptchaToken']: recaptchaValue }));
-    const url = `${process.env.BASE_URL}/contact-me`;
+    const url = 'https://7avy78q279.execute-api.us-east-1.amazonaws.com/v1/contact-me';
     const response = await fetch(url, {
       method: 'POST', 
       mode: 'cors', 
@@ -233,7 +233,7 @@ const ContactForm = () => {
           <textarea className={errors.message ? 'input input-error' : 'input'} id="message" rows={5} value={inputs.message} name="message" placeholder="Enter your message"  onChange={handleChange}></textarea>
         </div>
         <div >
-          <ReCAPTCHA ref={r => setCaptchaRef(r) } sitekey={process.env.REACT_APP_SITE_KEY} onChange={handleRecaptchaChange} />
+          <ReCAPTCHA ref={r => setCaptchaRef(r) } sitekey="6Lc9b8kpAAAAAFfqe0rivILSPSWv5kU_hFfxWBYX" onChange={handleRecaptchaChange} />
           { recaptchaValue !== null ? 
             <input className="submit-button"  disabled={recaptchaValue === null} type="submit" value="Submit" />
             : <div/>
