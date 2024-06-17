@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { srConfig } from '@config';
 import sr from '@utils/sr';
 import { usePrefersReducedMotion } from '@hooks';
-// import ReCAPTCHA from 'react-google-recaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const StyledFormSection = styled.div`
   max-width: 600px;
@@ -71,6 +71,7 @@ const StyledFormSection = styled.div`
 const ContactForm = () => {
   const revealContainer = useRef(null);
   const prefersReducedMotion = usePrefersReducedMotion();
+  let captcha;
 
   const initialInputs = {
     name: '',
@@ -89,7 +90,7 @@ const ContactForm = () => {
     message: false,
   };
   const [errors, setErrors] = useState(initialErrors);
-//   const [recaptchaValue, setRecaptchaValue] = useState(null);
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
 
   useEffect(() => {
     if (prefersReducedMotion) {
@@ -144,15 +145,28 @@ const ContactForm = () => {
     return isValid;
   };
 
+
+  const setCaptchaRef = ref => {
+    if (ref) {
+      return captcha = ref;
+    }
+  };
+
+  const resetCaptcha = () => {
+    // maybe set it till after is submitted
+    captcha.reset();
+  };
+
   const clearData = () => {
     setInputs({ ...initialInputs });
     setErrors({ ...initialErrors });
-    // setRecaptchaValue(null);
+    resetCaptcha();
+    setRecaptchaValue(null);
   };
 
   const submitData = async () => {
-    // const url = `${process.env.BASE_URL}/portfolio-contact`;
-    const url = 'https://j2yempxlb9.execute-api.us-east-1.amazonaws.com/v1/portfolio-contact';
+    setInputs(values => ({ ...values, ['recaptchaToken']: recaptchaValue }));
+    const url = `${process.env.BASE_URL}/contact-me`;
     const response = await fetch(url, {
       method: 'POST', 
       mode: 'cors', 
@@ -175,16 +189,16 @@ const ContactForm = () => {
     validate(name, value);
   };
 
-//   const handleRecaptchaChange = value => {
-//     setRecaptchaValue(value);
-//   };
+  const handleRecaptchaChange = value => {
+    setRecaptchaValue(value);
+  };
 
   const handleSubmit = event => {
     event.preventDefault();
 
-    // if (recaptchaValue === null) {
-    //   return;
-    // }
+    if (recaptchaValue === null) {
+      return;
+    }
 
     setErrors({ ...initialErrors });
     setTimeout(() => {
@@ -219,12 +233,12 @@ const ContactForm = () => {
           <textarea className={errors.message ? 'input input-error' : 'input'} id="message" rows={5} value={inputs.message} name="message" placeholder="Enter your message"  onChange={handleChange}></textarea>
         </div>
         <div >
-          {/* <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} onChange={handleRecaptchaChange} />
+          <ReCAPTCHA ref={r => setCaptchaRef(r) } sitekey={process.env.REACT_APP_SITE_KEY} onChange={handleRecaptchaChange} />
           { recaptchaValue !== null ? 
-            <input className="submit-button" disabled={recaptchaValue === null} type="submit" value="Submit" />
+            <input className="submit-button"  disabled={recaptchaValue === null} type="submit" value="Submit" />
             : <div/>
-          } */}
-          <input className="submit-button" type="submit" value="Submit" />
+          }
+          {/* <input className="submit-button" type="submit" value="Submit" /> */}
         </div>
       </form>
     </StyledFormSection>
