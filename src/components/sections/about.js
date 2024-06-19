@@ -125,7 +125,7 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig());
   }, []);
 
-  const skills = ['Swift/SwiftUI', 'Kotlin', 'JavaScript (ES6+)', 'TypeScript', 'Dart/Flutter', 'Java(SE, Spring, Apex)', 'Objective-C', 'PHP/Laravel', 'NodeJS (Express/Nest)', 'AWS and Docker'];
+  const skills = ['Swift/SwiftUI', 'Kotlin', 'JavaScript (ES6+)', 'TypeScript', 'Dart/Flutter', 'Java (SE/Spring/Apex)', 'Objective-C', 'PHP/Laravel', 'NodeJS (Express/Nest)', 'ReactJS/NextJS/VueJS', 'HTML/CSS', 'Fastlane (Ruby)', 'Docker', 'AWS'];
 
   return (
     <StyledAboutSection id="about" ref={revealContainer}>

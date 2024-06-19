@@ -78,7 +78,7 @@ const Hero = () => {
     //   rel="noreferrer">
     //   Keep In Touch
     // </a>
-    <a className="email-link" href={`mailto:lymeasna1@gmail.com`}>
+    <a className="email-link" href='#contact'>
       Get In Touch
     </a>
   );
