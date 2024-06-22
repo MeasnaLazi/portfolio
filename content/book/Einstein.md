@@ -1,5 +1,5 @@
 ---
-date: "2022/06/16"
+date: "2022/07/16"
 title: "Einstein: His Life and Universe"
 author: "Walter Isaacson"
 category: "Biography"

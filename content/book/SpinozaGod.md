@@ -1,5 +1,5 @@
 ---
-date: "2022/07/16"
+date: "2022/06/16"
 title: "Spinoza's God"
 author: "Franklin Lonzo Dixon"
 category: "Religion"

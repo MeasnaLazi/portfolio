@@ -1,5 +1,5 @@
 ---
-date: "2023/01/16"
+date: "2020/05/16"
 title: "How To Practice: The Way to a Meaningful Life"
 author: "The Dalai Lama His Holiness, Jeffrey Hopkins Ph.D., Jeffrey Hopkins"
 category: "Religion"

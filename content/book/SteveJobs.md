@@ -1,5 +1,5 @@
 ---
-date: "2022/05/16"
+date: "2023/01/16"
 title: "Steve Jobs"
 author: "Walter Isaacson"
 category: "Biography"
