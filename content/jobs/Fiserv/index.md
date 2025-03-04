@@ -7,6 +7,7 @@ range: 'April 2024 - Present'
 url: 'https://www.fiserv.com/'
 ---
 
+- Loading...
 - Collaborated closely with Business Analysis teams in the U.S. and Software Engineering teams in New Zealand, Central America, and the U.S. to drive project execution and deliverables.
 - Developed automation scripts for generating screenshots for the Play Store and App Store using UI tests and Fastlane, with Java for Android UI tests, Swift for iOS UI test, and Ruby and Shell script for Fastlane.
 - Integrated Fastlane screenshots's automation with existing Jenkins pipelines, enabling non-technical teams to run jobs through a user-friendly interface, built with Groovy and Ruby, to streamline processes.
