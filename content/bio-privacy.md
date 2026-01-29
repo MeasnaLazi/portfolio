@@ -5,7 +5,7 @@ date: "2026-01-29"
 ---
 
 # Privacy Policy for Bio
-**Last Updated:** January 29, 2026
+**Last Updated:** January 2026
 
 ## 1. Introduction
 **Bio** ("we," "our," or "us") is committed to protecting your privacy. We designed Bio to be **private by default**. We do not sell your personal data. This policy explains how your information is handled.
