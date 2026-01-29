@@ -28,4 +28,4 @@ To provide features like "Write Note," "Feedback & Change," and "Grammar Check,"
 You retain full ownership of your data. You may delete your data at any time by deleting the entry within the app or uninstalling the application.
 
 ## 6. Contact
-For questions regarding this policy, please contact: Sovannmeasna.ly@gmail.com
+For questions regarding this policy, please contact: sovannmeasna.ly@gmail.com

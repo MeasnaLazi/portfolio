@@ -43,4 +43,4 @@ You agree not to use Bio to:
 The app is provided on an "AS IS" and "AS AVAILABLE" basis. We make no warranties, expressed or implied, regarding the reliability or availability of the app.
 
 ## 9. Contact Us
-If you have any questions or suggestions about our Terms and Conditions, do not hesitate to contact us at: Sovannmeasna.ly@gmail.com
+If you have any questions or suggestions about our Terms and Conditions, do not hesitate to contact us at: sovannmeasna.ly@gmail.com
