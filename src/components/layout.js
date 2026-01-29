@@ -10,7 +10,7 @@ const StyledContent = styled.div`
   min-height: 100vh;
 `;
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, minimal = false }) => {
   const isHome = location.pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
 
@@ -62,13 +62,13 @@ const Layout = ({ children, location }) => {
             <Loader finishLoading={() => setIsLoading(false)} />
           ) : (
             <StyledContent>
-              <Nav isHome={isHome} />
-              <Social isHome={isHome} />
-              <Email isHome={isHome} />
+              {!minimal && <Nav isHome={isHome} />}
+              {!minimal && <Social isHome={isHome} />}
+              {!minimal && <Email isHome={isHome} />}
 
               <div id="content">
                 {children}
-                <Footer />
+                {!minimal && <Footer />}
               </div>
             </StyledContent>
           )}
@@ -81,6 +81,7 @@ const Layout = ({ children, location }) => {
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
   location: PropTypes.object.isRequired,
+  minimal: PropTypes.bool,
 };
 
 export default Layout;

@@ -73,7 +73,7 @@ const BioPrivacy = ({ data, location }) => {
     );
 
     return (
-        <Layout location={location}>
+        <Layout location={location} minimal>
             <Helmet title={title} />
 
             {prefersReducedMotion ? (
