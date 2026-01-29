@@ -60,10 +60,6 @@ const PrivacyGlobalStyle = createGlobalStyle`
     color: #0000EE !important;
     text-decoration: underline !important;
   }
-  a {
-    color: #0000EE !important;
-    text-decoration: underline !important;
-  }
 `;
 
 const BioPrivacy = ({ data, location }) => {
