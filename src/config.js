@@ -1,5 +1,5 @@
 module.exports = {
-  email: 'lymeasna1@gmail.com',
+  email: 'Sovannmeasna.ly@gmail.com',
 
   socialMedia: [
     {
@@ -40,11 +40,11 @@ module.exports = {
     {
       name: 'Book',
       url: '/#book',
-    },  
+    },
     {
       name: 'Contact',
       url: '/#contact',
-    },  
+    },
     {
       name: 'Blog',
       url: '/blog',

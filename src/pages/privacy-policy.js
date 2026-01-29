@@ -167,10 +167,10 @@ const PrivacyPolicy = ({ location }) => {
         <h2>Contact Us</h2>
         <p>If you have any questions about this Privacy Policy, You can contact us:</p>
         <ul>
-          <li>By email: <a href="mailto: lymeasna1@gmail.com">lymeasna1@gmail.com</a></li>
+          <li>By email: <a href="mailto: Sovannmeasna.ly@gmail.com">Sovannmeasna.ly@gmail.com</a></li>
         </ul>
       </div>
-   
+
     </StyledMainContainer>
   );
 

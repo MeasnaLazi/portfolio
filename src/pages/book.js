@@ -59,11 +59,11 @@ const BookPage = ({ location, data }) => {
 
   return (
     <Layout location={location}>
-      <Helmet title="Book" />
+      <Helmet title="Library" />
 
       <StyledMainContainer>
         <header>
-          <h1 className="big-heading">Book</h1>
+          <h1 className="big-heading">Library</h1>
           <p className="subtitle">
             <p>
               a collection of books, I have read.
