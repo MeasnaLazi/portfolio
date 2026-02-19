@@ -1,5 +1,5 @@
 ---
-date: '4'
+date: '01/01/2018'
 title: 'HARi Wallet App'
 cover: './demo.png'
 playstore: 'https://play.google.com/store/apps/details?id=com.haricrm.passbookandroid'

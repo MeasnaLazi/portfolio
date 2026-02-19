@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '01/01/2017'
 title: 'LoanCalculator Apps'
 cover: './demo.png'
 appstore: 'https://apps.apple.com/us/app/loan-calculator-cambodia/id1251857821'

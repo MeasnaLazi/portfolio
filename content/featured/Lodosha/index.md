@@ -1,5 +1,5 @@
 ---
-date: '1'
+date: '01/01/2021'
 title: 'Lodosha E-Learning Apps'
 cover: './demo.png'
 appstore: 'https://apps.apple.com/kh/app/lodosha/id1588041020'

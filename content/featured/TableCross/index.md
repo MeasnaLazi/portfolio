@@ -1,5 +1,5 @@
 ---
-date: '2'
+date: '01/01/2015'
 title: 'TableCross Apps'
 cover: './demo.jpg'
 appstore: 'https://apps.apple.com/us/app/tablecross/id951807024'

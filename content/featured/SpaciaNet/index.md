@@ -1,5 +1,5 @@
 ---
-date: '3'
+date: '01/01/2022'
 title: 'SpaciaNet Apps'
 cover: './demo.png'
 appstore: 'https://apps.apple.com/us/app/spacianet/id6446239656'
