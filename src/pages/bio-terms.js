@@ -63,50 +63,53 @@ const PrivacyGlobalStyle = createGlobalStyle`
 `;
 
 const BioTerms = ({ data, location }) => {
-    const [isMounted, setIsMounted] = useState(false);
-    const prefersReducedMotion = usePrefersReducedMotion();
+  const [isMounted, setIsMounted] = useState(false);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
-    useEffect(() => {
-        if (prefersReducedMotion) {
-            return;
-        }
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return;
+    }
 
-        const timeout = setTimeout(() => setIsMounted(true), navDelay);
-        return () => clearTimeout(timeout);
-    }, []);
+    const timeout = setTimeout(() => setIsMounted(true), navDelay);
+    return () => clearTimeout(timeout);
+  }, []);
 
-    const { html, frontmatter } = data.markdownRemark;
-    const { title } = frontmatter;
+  const { html, frontmatter } = data.markdownRemark;
+  const { title } = frontmatter;
 
-    const content = (
-        <StyledMainContainer className="fillHeight">
-            <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
-        </StyledMainContainer>
-    );
+  const themeQuery = typeof window !== 'undefined' ? new URLSearchParams(location.search).get('theme') : null;
+  const isLightMode = themeQuery === 'light';
 
-    return (
-        <Layout location={location} minimal>
-            <PrivacyGlobalStyle />
-            <Helmet title={title} />
+  const content = (
+    <StyledMainContainer className="fillHeight">
+      <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
+    </StyledMainContainer>
+  );
 
-            {prefersReducedMotion ? (
-                <>{content}</>
-            ) : (
-                <TransitionGroup component={null}>
-                    {isMounted && (
-                        <CSSTransition timeout={500} classNames="fadeup">
-                            {content}
-                        </CSSTransition>
-                    )}
-                </TransitionGroup>
-            )}
-        </Layout>
-    );
+  return (
+    <Layout location={location} minimal>
+      {isLightMode && <PrivacyGlobalStyle />}
+      <Helmet title={title} />
+
+      {prefersReducedMotion ? (
+        <>{content}</>
+      ) : (
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition timeout={500} classNames="fadeup">
+              {content}
+            </CSSTransition>
+          )}
+        </TransitionGroup>
+      )}
+    </Layout>
+  );
 };
 
 BioTerms.propTypes = {
-    data: PropTypes.object.isRequired,
-    location: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 export default BioTerms;

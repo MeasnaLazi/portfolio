@@ -78,6 +78,9 @@ const BioPrivacy = ({ data, location }) => {
   const { html, frontmatter } = data.markdownRemark;
   const { title } = frontmatter;
 
+  const themeQuery = typeof window !== 'undefined' ? new URLSearchParams(location.search).get('theme') : null;
+  const isLightMode = themeQuery === 'light';
+
   const content = (
     <StyledMainContainer className="fillHeight">
       <StyledContent dangerouslySetInnerHTML={{ __html: html }} />
@@ -86,7 +89,7 @@ const BioPrivacy = ({ data, location }) => {
 
   return (
     <Layout location={location} minimal>
-      <PrivacyGlobalStyle />
+      {isLightMode && <PrivacyGlobalStyle />}
       <Helmet title={title} />
 
       {prefersReducedMotion ? (
