@@ -1,9 +1,9 @@
 ---
 date: '01/01/2026'
 title: 'Bio: AI Journal & Life Story'
-cover: './demo.png'
+cover: './demo.jpg'
 appstore: 'https://apps.apple.com/us/app/bio-ai-journal-life-story/id6757865576'
-playstore: 
+playstore:
 external: 'https://apps.apple.com/us/app/bio-ai-journal-life-story/id6757865576'
 cta: ''
 tech:
